@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #00aaff 70%, #ff66b2 20%, #ffffff 10%); /* Blue dominant, angled gradient */
+            color: white;
+            position: relative;
+            height: 100vh; /* Ensure the body takes full viewport height */
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #000; /* Dark text color for contrast */
+        }
+
+        p {
+            font-size: 1.8em;
+            margin-bottom: 50px;
+            color: #000; /* Dark text color for contrast */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons a:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+
+            .buttons {
+                top: 10px;
+                right: 10px;
+            }
+
+            .buttons a {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .buttons {
+                top: 5px;
+                right: 5px;
+            }
+
+            .buttons a {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<h1>Sangam Portfolio</h1>
+<p>Welcome to Sangam Portfolio</p>
+</body>
+</html>
