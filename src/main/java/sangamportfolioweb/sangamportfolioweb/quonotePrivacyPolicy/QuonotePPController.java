@@ -1,4 +1,4 @@
-package sangamportfolioweb.sangamportfolioweb.privacyPolicy;
+package sangamportfolioweb.sangamportfolioweb.quonotePrivacyPolicy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,15 +6,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class PrivacyPolicyController {
-
+public class QuonotePPController {
     @Autowired
-    private PrivacyPolicyService privacyPolicyService;
+    private QuonotePPService privacyPolicyService;
 
-    @GetMapping("/privacyPolicy")
+    @GetMapping("/quonotePrivacyPolicy")
     String getPrivacyPolicy(Model model) {
         try {
-            PrivacyPolicyResponseModel responseModel = privacyPolicyService.getPrivacyPolicy();
+            QuonotePPResponseModel responseModel = privacyPolicyService.getPrivacyPolicy();
             model.addAttribute("privacyPolicy", responseModel);
             return "privacyPolicy";
         } catch (Exception e) {
