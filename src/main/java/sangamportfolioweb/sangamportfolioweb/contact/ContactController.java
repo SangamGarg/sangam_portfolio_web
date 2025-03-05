@@ -15,7 +15,7 @@ public class ContactController {
     private EmailApiService emailApiService;
 
     @GetMapping("/contact")
-    String getSupport(Model model) {
+    String getContact(Model model) {
         try {
             return "contact";
         } catch (Exception e) {

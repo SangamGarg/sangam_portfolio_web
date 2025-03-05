@@ -20,7 +20,7 @@ public class EmailApiService {
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setBearerAuth(apiKey);
 
-        String requestJson = String.format("{\"from\":{\"email\":\"mailtrap@demomailtrap.com\",\"name\":\"Sangam Garg Portfolio Contact\"},\"to\":[{\"email\":\"sangamgarg17@gmail.com\"}],\"subject\":\"%s\",\"text\":\"%s\",\"category\":\"Integration Test\"}", emailRequestBody.getSubject(), emailRequestBody.getBody());
+        String requestJson = String.format("{\"from\":{\"email\":\"sangam.portfolio@demomailtrap.com\",\"name\":\"Sangam Garg Portfolio Contact\"},\"to\":[{\"email\":\"sangamgarg17@gmail.com\"}],\"subject\":\"%s\",\"text\":\"%s\",\"category\":\"Portfolio Email Mobile\"}", emailRequestBody.getSubject(), emailRequestBody.getBody());
 
         HttpEntity<String> entity = new HttpEntity<>(requestJson, headers);
 
@@ -41,7 +41,7 @@ public class EmailApiService {
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setBearerAuth(apiKey);
 
-        String requestJson = String.format("{\"from\":{\"email\":\"mailtrap@demomailtrap.com\",\"name\":\"Sangam Garg Portfolio Website\"}," + "\"to\":[{\"email\":\"sangamgarg17@gmail.com\"}]," + "\"subject\":\"%s\",\"text\":\"From: %s (%s)\\n\\n%s\",\"category\":\"Integration Test\"}", emailRequestBody.getSubject(), emailRequestBody.getName(), emailRequestBody.getEmail(), emailRequestBody.getBody());
+        String requestJson = String.format("{\"from\":{\"email\":\"sangam.portfolio@demomailtrap.com\",\"name\":\"Portfolio Website Sangam Garg\"}," + "\"to\":[{\"email\":\"sangamgarg17@gmail.com\"}]," + "\"subject\":\"%s\",\"text\":\"From: %s (%s)\\n\\n%s\",\"category\":\"Portfolio Email Website\"}", emailRequestBody.getSubject(), emailRequestBody.getName(), emailRequestBody.getEmail(), emailRequestBody.getBody());
 
         HttpEntity<String> entity = new HttpEntity<>(requestJson, headers);
 
