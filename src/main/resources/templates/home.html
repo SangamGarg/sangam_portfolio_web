@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             font-family: 'Poppins', sans-serif;
             background: url('/images/background.png') no-repeat center center/cover;
             color: white;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
@@ -20,49 +22,58 @@
             min-height: 100vh;
             overflow: auto;
         }
+
         .container {
             display: flex;
             justify-content: space-between;
             padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
         }
+
         .nav-links a {
             margin: 0 20px;
             text-decoration: none;
             color: white;
             font-weight: bold;
         }
+
         .nav-links a:hover {
             color: #FF4C4C;
         }
+
         .content {
-            padding: 100px;
-            max-width: 50%;
+            padding: 50px;
+            max-width: 600px;
+            box-sizing: border-box;
+            text-align: left;
         }
+
         .content h1 {
             font-size: 4rem;
+            margin: 0;
         }
+
         .content p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             line-height: 1.8;
         }
-        .buttons {
-            margin-top: 30px;
+
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
         }
-        .btn {
-            padding: 15px 30px;
-            background: #FF4C4C;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-right: 20px;
-        }
-        .btn:hover {
-            background: #ff6b6b;
-        }
+
         .hero-image img {
-            max-height: 90vh;
-        }.play-store-link img {
-            width: 400px;
+            max-width: 50%;
+            height: auto;
+        }
+
+        .play-store-link img {
+            width: 300px;
             transition: transform 0.3s ease;
         }
 
@@ -99,11 +110,7 @@
             filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
         }
 
-        .contact-info {
-            margin: 30px 0;
-            font-size: 1.2em;
-        }
- .resume-card {
+        .resume-card {
             margin: 40px auto;
             padding: 15px;
             max-width: 250px;
@@ -122,39 +129,75 @@
             color: black;
             font-size: 1.25rem;
         }
+
         .copyright {
             margin-top: 40px;
             font-size: 1em;
         }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3em;
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
 
-            p {
-                font-size: 1.5em;
+            .content {
+                padding: 30px;
+                text-align: center;
             }
+
+            .play-store-link img {
+                width: 250px;
+            }
+
+            .hero-container {
+                flex-direction: column;
+            }
+
+            .hero-image img {
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 3rem;
+            }
+
+            .content p {
+                font-size: 1.2rem;
+            }
+
             .play-store-link img {
                 width: 200px;
             }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            p {
-                font-size: 1.2em;
-            }
             .social-links a img {
                 width: 40px;
             }
-
         }
 
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+
+            .play-store-link img {
+                width: 150px;
+            }
+
+            .social-links a img {
+                width: 30px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header class="container">
@@ -166,7 +209,7 @@
     </nav>
 </header>
 
-<section class="container">
+<section class="hero-container">
     <div class="content">
         <h2>HELLO!</h2>
         <h2>I Am,</h2>
@@ -178,8 +221,8 @@
         <img src="/images/sangam.png" alt="Sangam Garg">
     </div>
 </section>
-<h1>Get My Portfolio Application</h1>
 
+<h1>Get My Portfolio Application</h1>
 <a href="https://play.google.com/store/apps/details?id=com.sangam.sangamportfolio" class="play-store-link"
    target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
@@ -189,40 +232,23 @@
 <div class="social-container">
     <h3>Let's Connect</h3>
     <div class="social-links">
-        <a href="https://www.youtube.com/@sangamgarg19" target="_blank">
-            <img src="/images/youtube.png" alt="YouTube">
-        </a>
-
-        <a href="https://instagram.com/sangamgarg19" target="_blank">
-            <img src="/images/instagram.png" alt="Instagram">
-        </a>
-
-        <a href="https://www.linkedin.com/in/sangam-garg" target="_blank">
-            <img src="/images/linked.png" alt="LinkedIn">
-        </a>
-
-        <a href="https://medium.com/@sangamgarg17" target="_blank">
-            <img src="/images/medium.png" alt="Medium">
-        </a>
-
-        <a href="https://github.com/sangamgarg" target="_blank">
-            <img src="/images/github.png" alt="GitHub">
-        </a>
+        <a href="https://www.youtube.com/@sangamgarg19" target="_blank"><img src="/images/youtube.png"
+                                                                             alt="YouTube"></a>
+        <a href="https://instagram.com/sangamgarg19" target="_blank"><img src="/images/instagram.png"
+                                                                          alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/sangam-garg" target="_blank"><img src="/images/linked.png" alt="LinkedIn"></a>
+        <a href="https://medium.com/@sangamgarg17" target="_blank"><img src="/images/medium.png" alt="Medium"></a>
+        <a href="https://github.com/sangamgarg" target="_blank"><img src="/images/github.png" alt="GitHub"></a>
     </div>
 </div>
 
-<!--<div class="contact-info">-->
-<!--    <a href="/contact" style="text-decoration: none; color: inherit;">-->
-<!--        Contact: +91 7210581614 | sangamgarg17@gmail.com-->
-<!--    </a>-->
-<!--</div>-->
 <div class="resume-card">
     <a href="https://drive.google.com/file/d/1oUGPEvzC_IQvatXDPqZ1uaDArcZJgYaJ/view?usp=sharing" target="_blank">View
         Resume</a>
 </div>
 
-<div class="copyright">
-    &copy; 2025 Sangam Garg. All Rights Reserved.
-</div>
+<div class="copyright">&copy; 2025 Sangam Garg. All Rights Reserved.</div>
+
 </body>
+
 </html>
