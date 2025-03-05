@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #80deea);
+            color: #333;
+        }
+        .header {
+            background: #00796b;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background: #004d40;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: calc(100vh - 80px);
+            flex-direction: column;
+        }
+        .box {
+            width: 90%;
+            max-width: 800px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            background: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s;
+        }
+        .box img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 6px solid #00796b;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00796b;
+            font-weight: 600;
+        }
+        .box p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 10px 0;
+            color: #555;
+        }
+        .box p span {
+            font-weight: 600;
+            color: #00796b;
+        }
+        .faq-header {
+            margin: 30px 0;
+            font-size: 28px;
+            color: #00796b;
+            font-weight: 700;
+            text-align: left;
+        }
+        .faq-item {
+            background: rgba(255, 255, 255, 0.9); /* semi-transparent white background */
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .faq-question {
+            padding: 20px;
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+            background: #e0f2f1;
+            border-bottom: 1px solid #ddd;
+        }
+        .faq-question:hover {
+            background: #b2dfdb;
+        }
+        .faq-question::after {
+            content: '▶';
+            font-size: 24px;
+            color: #00796b;
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            background: #f1f8f7;
+            color: #555;
+        }
+        .faq-answer.show {
+            max-height: 300px;
+            padding: 20px;
+        }
+        .faq-question.open::after {
+            transform: rotate(90deg);
+        }
+        .email-form {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .email-form input, .email-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+        .email-form button {
+            padding: 10px 20px;
+            background: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+        .email-form button:hover {
+            background: #004d40;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .box {
+                width: 100%;
+                padding: 20px;
+            }
+            .box img {
+                width: 120px;
+            }
+            .faq-question {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="box">
+        <img src="https://cdn.pixabay.com/photo/2016/01/16/17/43/contact-us-1143659_640.jpg" alt="Contact">
+        <div class="email-form">
+            <h1>Contact Me</h1>
+            <form th:action="@{/send-email}" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="body" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Email</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
