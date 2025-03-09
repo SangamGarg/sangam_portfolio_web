@@ -13,27 +13,6 @@ public class EmailApiService {
     @Value("${email.service.api.key}")
     private String apiKey;
 
-    public String sendMail(EmailRequestBody emailRequestBody) {
-        String url = "https://send.api.mailtrap.io/api/send";
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.setBearerAuth(apiKey);
-
-        String requestJson = String.format("{\"from\":{\"email\":\"sangam.portfolio@demomailtrap.com\",\"name\":\"Sangam Garg Portfolio Contact\"},\"to\":[{\"email\":\"sangamgarg17@gmail.com\"}],\"subject\":\"%s\",\"text\":\"%s\",\"category\":\"Portfolio Email Mobile\"}", emailRequestBody.getSubject(), emailRequestBody.getBody());
-
-        HttpEntity<String> entity = new HttpEntity<>(requestJson, headers);
-
-        ResponseEntity<String> response = restTemplate.postForEntity(url, entity, String.class);
-
-        if (response.getStatusCode() == HttpStatus.OK) {
-            return "Email Send Successfully";
-        } else {
-            throw new RuntimeException("Failed to send email: " + response.getStatusCode());
-        }
-    }
-
-
     public String sendMailWebsite(EmailWebsiteRequestBody emailRequestBody) {
         String url = "https://send.api.mailtrap.io/api/send";
 

@@ -1,5 +1,6 @@
 package sangamportfolioweb.sangamportfolioweb.contact;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,15 +27,16 @@ public class ContactController {
     }
 
     @PostMapping("/send-email")
-    String sendEmail(@RequestParam String name, @RequestParam String email, @RequestParam String subject, @RequestParam String body, Model model) {
+    String sendEmail(@Valid EmailWebsiteRequestBody emailRequestBody, Model model) {
         try {
-            EmailWebsiteRequestBody emailRequestBody = new EmailWebsiteRequestBody(name, email, subject, body);
             emailApiService.sendMailWebsite(emailRequestBody);
+            model.addAttribute("successEmail", "I have received your email and will be in contact soon!");
             model.addAttribute("success", "Email sent successfully!");
+            return "success";
         } catch (Exception e) {
-            model.addAttribute("error", "Failed to send email: " + e.getMessage());
+            model.addAttribute("error", "Failed to send email");
+            return "error";
         }
-        return "redirect:/contact";
     }
 
 }
