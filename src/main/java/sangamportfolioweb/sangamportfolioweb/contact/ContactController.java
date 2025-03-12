@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import sangamportfolioweb.sangamportfolioweb.contact.email.EmailApiService;
 import sangamportfolioweb.sangamportfolioweb.contact.email.EmailWebsiteRequestBody;
 
+import static sangamportfolioweb.sangamportfolioweb.utils.Constants.MAIL_TO_EMAIL;
+import static sangamportfolioweb.sangamportfolioweb.utils.Constants.MY_EMAIL_ID;
+
 @Controller
 public class ContactController {
     @Autowired
@@ -18,6 +21,8 @@ public class ContactController {
     @GetMapping("/contact")
     String getContact(Model model) {
         try {
+            model.addAttribute("mailtoemail", MAIL_TO_EMAIL);
+            model.addAttribute("myEmail", MY_EMAIL_ID);
             return "contact";
         } catch (Exception e) {
             model.addAttribute("error", e.getLocalizedMessage());

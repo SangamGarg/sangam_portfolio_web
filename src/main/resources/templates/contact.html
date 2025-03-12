@@ -185,12 +185,13 @@
         <img src="https://cdn.pixabay.com/photo/2016/01/16/17/43/contact-us-1143659_640.jpg" alt="Contact">
         <div class="email-form">
             <h1>Contact Me</h1>
+            <p><a th:href="@{${mailtoemail}}" th:target="_blank" th:text="${myEmail}">email</a></p>
             <form th:action="@{/send-email}" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="text" name="subject" placeholder="Subject" required>
                 <textarea name="body" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Email</button>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </div>
