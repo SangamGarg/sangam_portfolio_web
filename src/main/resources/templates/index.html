@@ -63,11 +63,11 @@
                     See My Resume
                 </button>
             </a>
-<!--            <a href="/file/sangam-resume.pdf" download>-->
-<!--                <button class="btn btn-color-2">-->
-<!--                    Download Resume-->
-<!--                </button>-->
-<!--            </a>-->
+            <!--            <a href="/file/sangam-resume.pdf" download>-->
+            <!--                <button class="btn btn-color-2">-->
+            <!--                    Download Resume-->
+            <!--                </button>-->
+            <!--            </a>-->
             <button class="btn btn-color-1" th:onclick="@{location.href='./#contact'}">
                 Contact Info
             </button>
@@ -104,7 +104,8 @@
                             class="icon"
                     />
                     <h3>Experience</h3>
-                    <p><span th:text="${myExpInYear}">exp</span>+ years (Non-Professional)<br/>Android Development <em> (2022 - till
+                    <p><span th:text="${myExpInYear}">exp</span>+ years (Non-Professional)<br/>Android Development <em>
+                        (2022 - till
                         date)</em></p>
                 </div>
                 <div class="details-container">
@@ -114,7 +115,8 @@
                             class="icon"
                     />
                     <h3>Education</h3>
-                    <p>B.Tech (Computer Science & Engineering) <br/>IMS Engineering College, Ghaziabad <em> <br/>(2020 - 2024)</em> <em><br/> CGPA
+                    <p>B.Tech (Computer Science & Engineering) <br/>IMS Engineering College, Ghaziabad <em> <br/>(2020 -
+                        2024)</em> <em><br/> CGPA
                         - 8.1</em></p>
                 </div>
             </div>
@@ -196,31 +198,32 @@
     <div class="experience-details-container">
         <div class="about-containers">
             <div class="details-container">
-                    <div th:each="work : ${workExperience}">
-                    <img th:src="@{${work.assetUrl}}" th:alt="${work.altName}" alt="Talen Titan" style="width:200px; height:auto;"/>
-                        <div>
-                            <h2 th:text="${work.company}">Company Name</h2>
-                            <h3 th:text="${work.designation}">Designation</h3>
-                            <p th:text="${work.details}">Details</p>
-                        </div>
+                <div th:each="work : ${workExperience}">
+                    <img th:src="@{${work.assetUrl}}" th:alt="${work.altName}" alt="Talen Titan"
+                         style="width:200px; height:auto;"/>
+                    <div>
+                        <h2 th:text="${work.company}">Company Name</h2>
+                        <h3 th:text="${work.designation}">Designation</h3>
+                        <p th:text="${work.details}">Details</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-<!--        <div class="client-wrapper">-->
-<!--            <i id="left" class="fa-solid fa-angle-left"></i>-->
-<!--            <ul class="carousel">-->
-<!--                <li class="card" th:each="work : ${workExperience}">-->
-<!--                    <div class="img"><img th:src="@{${work.assetUrl}}" th:alt="${work.altName}"-->
-<!--                                          draggable="true"></div>-->
-<!--                    <h2 th:text="${work.company}">Company Name</h2>-->
-<!--                    <span th:text="${work.designation}">Designation</span>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--            <i id="right" class="fa-solid fa-angle-right"></i>-->
-<!--        </div>-->
+    <!--        <div class="client-wrapper">-->
+    <!--            <i id="left" class="fa-solid fa-angle-left"></i>-->
+    <!--            <ul class="carousel">-->
+    <!--                <li class="card" th:each="work : ${workExperience}">-->
+    <!--                    <div class="img"><img th:src="@{${work.assetUrl}}" th:alt="${work.altName}"-->
+    <!--                                          draggable="true"></div>-->
+    <!--                    <h2 th:text="${work.company}">Company Name</h2>-->
+    <!--                    <span th:text="${work.designation}">Designation</span>-->
+    <!--                </li>-->
+    <!--            </ul>-->
+    <!--            <i id="right" class="fa-solid fa-angle-right"></i>-->
+    <!--        </div>-->
 
     <img
             th:src="@{${arrow.assetUrl}}"
@@ -442,6 +445,8 @@
         </div>
     </nav>
     <p>Made with ❤️ By Sangam Garg</p>
+    <p>Built with Spring Boot, Java, Maven & Thymeleaf</p>
+
 </footer>
 <script type="text/javascript" th:src="@{/js/script.js}"></script>
 </body>
