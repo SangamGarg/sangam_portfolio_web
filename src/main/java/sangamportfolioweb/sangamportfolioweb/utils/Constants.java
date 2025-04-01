@@ -6,7 +6,7 @@ public final class Constants {
     public static final String RESUME_FILENAME = "sangam-resume.pdf";
     public static final String RESUME_FILE_PATH = "src/main/resources/static/file/" + RESUME_FILENAME;
     public static final String RESUME_MEDIA_TYPE = "application/pdf";
-    public static final String  GOOGLE_RESUME_DRIVE="https://drive.google.com/file/d/1YCv3Rjr9EgpBHObQZ5QQ6p0NLPs1Rds8/view?usp=sharing";
+    public static final String GOOGLE_RESUME_DRIVE = "https://drive.google.com/file/d/1YCv3Rjr9EgpBHObQZ5QQ6p0NLPs1Rds8/view?usp=sharing";
     public static final String EMAIL_ASSET_URL = "/assets/email.png";
     public static final String LINKEDIN_ASSET_URL = "/assets/linkedin.png";
     public static final String GITHUB_ASSET_URL = "/assets/github.png";
@@ -69,5 +69,6 @@ public final class Constants {
     public static final String MY_NAME = "Sangam Garg";
     public static final int MY_EXPERIENCE_IN_YEARS = 3;
     public static final String MY_EMAIL_ID = "Click to mail me - sangamgarg17@gmail.com";
+    public static final String MY_EMAIL_ID_GMAIL = "Click to mail me through gmail - sangamgarg17@gmail.com";
     public static final String MAIL_TO_EMAIL = "mailto:" + MY_EMAIL_ID;
 }
