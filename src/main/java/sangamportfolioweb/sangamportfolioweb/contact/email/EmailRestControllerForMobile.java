@@ -13,17 +13,17 @@ public class EmailRestControllerForMobile {
     private EmailServiceNew emailService;
 
     @PostMapping("/send-email-mobile")
-    String sendEmail(@RequestBody EmailWebsiteRequestBody emailRequestBody, Model model) {
+    EmailMobileResponseBody sendEmail(@RequestBody EmailWebsiteRequestBody emailRequestBody, Model model) {
 
         try {
             emailService.sendEmail(emailRequestBody);
             model.addAttribute("successEmail", "I have received your email and will be in contact soon!");
             model.addAttribute("success", "Email sent successfully!");
-            return "success";
+            return new EmailMobileResponseBody("success") ;
         } catch (Exception e) {
             System.out.println("Email Error" + e.getLocalizedMessage());
             model.addAttribute("error", "Failed to send email");
-            return "error";
+            return new EmailMobileResponseBody("error") ;
         }
     }
 }
