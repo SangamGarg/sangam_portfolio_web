@@ -37,6 +37,7 @@ public class PortfolioWebsiteController {
     @GetMapping("/")
     public String portfolio(Model model) {
         model.addAttribute("myName", MY_NAME);
+        model.addAttribute("workingAs", WORKING_AS);
         model.addAttribute("myExpInYear", MY_EXPERIENCE_IN_YEARS);
         model.addAttribute("myEmail", MY_EMAIL_ID);
         model.addAttribute("resumegoogle", GOOGLE_RESUME_DRIVE);
