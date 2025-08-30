@@ -4,13 +4,13 @@ import lombok.Getter;
 
 @Getter
 public enum Titles {
-  SOFTWARE_DEVELOPMENT_ENGINEER("Software Developer"), CONTENT_CREATOR("Android Developer"), MUSIC_PRODUCER(
-      "Java Developer");
+    SOFTWARE_DEVELOPER("Software Developer"), ANDROID_DEVELOPER("Android Developer"), JAVA_DEVELOPER(
+            "Java Developer"), SOFTWARE_ENGINEER("Software Engineer");
 
-  private final String value;
+    private final String value;
 
-  Titles(String value) {
-    this.value = value;
-  }
+    Titles(String value) {
+        this.value = value;
+    }
 
 }

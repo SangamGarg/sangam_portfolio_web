@@ -27,7 +27,7 @@ public class EmailServiceNew {
                 """, emailWebsiteRequestBody.getEmail(), emailWebsiteRequestBody.getName(), emailWebsiteRequestBody.getSubject(), emailWebsiteRequestBody.getBody());
         //  message.setSentDate(date);
         message.setTo("sangamgarg17@gmail.com");
-        message.setSubject("Sangam Website Portfolio Contact");
+        message.setSubject("Sangam Portfolio Contact");
         message.setText(body);
 
         mailSender.send(message);
