@@ -65,10 +65,11 @@ public final class Constants {
     public static final String ARROW_ASSET_URL = "/assets/arrow.png";
     public static final String CHECKMARK_ASSET_URL = "/assets/checkmark.png";
     public static final String TALENTITAN_LOGO_URL = "/assets/talentitan.png";
+    public static final String TCS_LOGO_URL = "/assets/tcs.png";
     public static final String POC_BANNER_URL = "/assets/bannerplaystore.png";
     public static final String MY_NAME = "Sangam Garg";
     public static final String WORKING_AS = "Assistant System Engineer @TCS";
-    public static final int MY_EXPERIENCE_IN_YEARS = 3;
+    public static final int MY_EXPERIENCE_IN_YEARS = 1;
     public static final String MY_EMAIL_ID = "Click to mail me - sangamgarg17@gmail.com";
     public static final String MY_EMAIL_ID_GMAIL = "Click to mail me through gmail - sangamgarg17@gmail.com";
     public static final String MAIL_TO_EMAIL = "mailto:" + MY_EMAIL_ID;

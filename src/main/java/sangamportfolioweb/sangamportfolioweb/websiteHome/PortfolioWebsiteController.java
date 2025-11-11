@@ -27,8 +27,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import static sangamportfolioweb.sangamportfolioweb.enums.experienceEnum.Designations.ANDROID_DEVELOPER_INTERN;
+import static sangamportfolioweb.sangamportfolioweb.enums.experienceEnum.Designations.JAVA_DEVELOPER;
 import static sangamportfolioweb.sangamportfolioweb.enums.experienceEnum.WorkDetails.ANDROID_DEVELOPER_INTERN_DETAILS;
+import static sangamportfolioweb.sangamportfolioweb.enums.experienceEnum.WorkDetails.JAVA_DEVELOPER_DETAILS;
 import static sangamportfolioweb.sangamportfolioweb.enums.experienceEnum.WorkExperience.TALEN_TITAN;
+import static sangamportfolioweb.sangamportfolioweb.enums.experienceEnum.WorkExperience.TCS;
 import static sangamportfolioweb.sangamportfolioweb.utils.Constants.*;
 
 @Controller
@@ -152,6 +155,9 @@ public class PortfolioWebsiteController {
 
     private static List<WorkExperienceImgTag> getExperienceImgTagAttributes() {
         List<WorkExperienceImgTag> imgTagList = new ArrayList<>();
+        imgTagList.add(WorkExperienceImgTag.builder().assetUrl(TCS_LOGO_URL).altName("Tata Consultancy Services (TCS)")
+                .company(TCS.getValue()).designation(JAVA_DEVELOPER.getValue()).details(JAVA_DEVELOPER_DETAILS.getValue()).draggable(false).build());
+
         imgTagList.add(WorkExperienceImgTag.builder().assetUrl(TALENTITAN_LOGO_URL).altName("Talen Titan Pvt Ltd")
                 .company(TALEN_TITAN.getValue()).designation(ANDROID_DEVELOPER_INTERN.getValue()).details(ANDROID_DEVELOPER_INTERN_DETAILS.getValue()).draggable(false).build());
         return imgTagList;

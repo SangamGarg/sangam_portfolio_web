@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum Titles {
-    SOFTWARE_DEVELOPER("Software Developer"), ANDROID_DEVELOPER("Android Developer"), JAVA_DEVELOPER(
-            "Java Developer"), SOFTWARE_ENGINEER("Software Engineer");
+    SOFTWARE_DEVELOPMENT_ENGINEER("Software Development Engineer"), ANDROID_DEVELOPER("Android Developer"), JAVA_DEVELOPER(
+            "Java Developer");
 
     private final String value;
 
