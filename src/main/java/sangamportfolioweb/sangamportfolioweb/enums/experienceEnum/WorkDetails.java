@@ -10,9 +10,9 @@ public enum WorkDetails {
             "• Diagnosed and resolved software bugs, performance issues, and performed debugging to ensure high-quality performance, delivering interactive and user-friendly interfaces."),
 
 
-    JAVA_DEVELOPER_DETAILS("• Optimized customer account lookups, reducing repeated server calls by 40% and improving average response time by 30% during branch customer verification workflows.\n" +
-            "• Implemented SQL query optimization and indexing strategies that reduced data retrieval time by over 25%, improving the performance of high-volume extraction jobs.\n" +
-            "• Contributed to redundant");
+    JAVA_DEVELOPER_DETAILS("• Engineered enterprise-grade Java backend and batch-processing applications for SBI's Central KYC platform using Java 25, Spring Boot, Java 8, and Spring MVC, enhancing processing throughput by 45% through multithreading solutions allowing data extraction processes to execute concurrently across multiple distributed servers.\n" +
+            "• Executed advanced SQL query optimization and database indexing strategies inside the application deployment structure (WAR/JAR), reducing high-volume data retrieval times by over 25%.\n" +
+            "• Optimized redundant code, achieving a 20% reduction in code complexity and enhancing overall software maintainability for critical applications.");
 
     private final String value;
 
