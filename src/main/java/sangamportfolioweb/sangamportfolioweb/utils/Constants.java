@@ -6,7 +6,7 @@ public final class Constants {
     public static final String RESUME_FILENAME = "sangam-resume.pdf";
     public static final String RESUME_FILE_PATH = "src/main/resources/static/file/" + RESUME_FILENAME;
     public static final String RESUME_MEDIA_TYPE = "application/pdf";
-    public static final String GOOGLE_RESUME_DRIVE = "https://drive.google.com/file/d/17BcqWpj4VWg3eSTfnC58sQNsr9RxtkYt/view?usp=sharing";
+    public static final String GOOGLE_RESUME_DRIVE = "https://drive.google.com/file/d/1aE2huB2QUgW1b_UA7C9OiSNjQASeg1gt/view?usp=sharing";
     public static final String EMAIL_ASSET_URL = "/assets/email.png";
     public static final String LINKEDIN_ASSET_URL = "/assets/linkedin.png";
     public static final String GITHUB_ASSET_URL = "/assets/github.png";
